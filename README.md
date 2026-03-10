@@ -1,35 +1,27 @@
-⚙️ Core Features & Modules
-1. Sequential LSB Steganography
-Converts text payloads into binary streams and sequentially embeds the data into the Least Significant Bit (LSB) of the image's primary color matrix. This ensures the visual integrity of the cover image remains intact.
+🛠️ Prerequisites
+MATLAB (Tested on recent versions. If it crashes on yours, let's just blame the version).
 
-2. PRNG-Based Scattering (Security Enhancement)
-Utilizes Pseudo-Random Number Generation (randperm) driven by a secret user-defined seed. This scatters the message bits unpredictably across the image matrix, neutralizing basic sequential extraction attacks.
+An image to use as a cover (.png or .bmp format is highly recommended to avoid losing your hidden bits to JPEG compression).
 
-3. Cryptographic Layer
-Applies a bitwise XOR Cipher to the binary payload prior to embedding. Even if the scattered bits are successfully located, the data cannot be read without the matching cryptographic key.
+A basic understanding of matrices (or at least the ability to pretend you understand them during presentations).
 
-🛠️ Tools & Prerequisites
-Software: MATLAB R2021a or newer (recommended).
+🚀 How to Execute (Without breaking anything)
 
-Required Toolboxes: Image Processing Toolbox (optional but recommended for advanced image I/O).
+Method A: The "Keep It Simple" Approach (Sequential)
 
-Concepts Applied: Matrix Manipulation, Bitwise Operations, Digital Image Processing, Cryptography.
+Method B: The "Tin Foil Hat" Approach (Random Scattering)
 
-🚀 Getting Started
-1. Clone the Repository
-2. Standard Steganography (Sequential)
-To hide a message using a standard sequential approach:
 
-3. Randomized Steganography (Scattered)
-To maximize security by scattering the bits with a seed:
+🔮 Future Scope (To-Do List before graduation)
+[ ] Activate the aes_final.m script: Upgrade the basic XOR cipher to a full, government-grade Advanced Encryption Standard (AES) implementation.
 
-🔮 Future Scope
-AES Integration: Replacing the bitwise XOR cipher with the Advanced Encryption Standard (AES) utilizing the current aes_final.m module architecture.
+[ ] Image Quality Metrics: Add a script to calculate PSNR (Peak Signal-to-Noise Ratio) and MSE (Mean Squared Error) to mathematically prove the image isn't ruined.
 
-Payload Capacity Checking: Dynamic calculation of Maximum Hiding Capacity (MHC) based on target image resolution.
-
-Visual Fidelity Metrics: Implementing PSNR (Peak Signal-to-Noise Ratio) and MSE (Mean Squared Error) calculations to quantify image distortion.
+[ ] Capacity Checking: Make the code automatically scream at you if you try to hide an entire novel inside a tiny 50x50 pixel image.
 
 <div align="center">
-<i>Developed by Pallela Sai Manoj Kumar | B.Tech ECE (4th Year)</i>
+<i>Architected, coded, and debugged by <b>Pallela Sai Manoj Kumar</b>.</i>
+
+
+<i>B.Tech Electronics & Communication Engineering</i>
 </div>
